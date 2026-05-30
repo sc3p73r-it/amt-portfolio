@@ -84,35 +84,50 @@ export const technologies = [
   "Terraform",
 ];
 
-export const experience = [
-  {
-    role: "Senior Network Security Engineer",
-    company: "Enterprise Financial Services",
-    period: "2021 — Present",
-    highlights: [
-      "Led migration from legacy ASA to Palo Alto PA-5200 series across 12 data centers.",
-      "Designed zero-trust micro-segmentation using Cisco ISE and Firepower.",
-      "Reduced security incidents by 40% through centralized logging and SIEM correlation.",
-    ],
-  },
+export type ExperienceItem = {
+  role: string;
+  company: string;
+  period: string;
+  location: string;
+  skills: string[];
+  highlights: string[];
+};
+
+export const experience: ExperienceItem[] = [
   {
     role: "Network Security Engineer",
-    company: "Telecommunications Provider",
-    period: "2018 — 2021",
+    company: "Hi-link Company Limited",
+    period: "Jul 2025 — Present",
+    location: "Nay Pyi Taw, Mandalay Region, Myanmar · On-site",
+    skills: ["Cisco Systems Products", "Palo Alto Networks"],
     highlights: [
-      "Managed Check Point Security Gateway clusters serving 2M+ subscribers.",
-      "Implemented IPSec and SSL VPN for remote workforce during scale-up.",
-      "Automated firewall rule audits with Python and Check Point API.",
+      "Design and maintain enterprise network security using Cisco and Palo Alto platforms.",
+      "Implement firewall policies, VPN access, and perimeter defense for on-site infrastructure.",
+      "Collaborate with operations teams on network hardening, monitoring, and incident response.",
     ],
   },
   {
     role: "Network Engineer",
-    company: "Managed Service Provider",
-    period: "2016 — 2018",
+    company: "One Cloud Technology",
+    period: "Jun 2024 — Jun 2025",
+    location: "Yangon, Myanmar · On-site",
+    skills: ["Palo Alto Networks", "Trend Micro"],
     highlights: [
-      "Deployed Cisco Catalyst switching and ASA firewalls for SMB clients.",
-      "Configured BGP peering and MPLS WAN for multi-branch connectivity.",
-      "Documented runbooks and change management procedures.",
+      "Deployed and managed Palo Alto NGFW solutions for cloud and enterprise customers.",
+      "Integrated Trend Micro endpoint and network security across client environments.",
+      "Supported routing, switching, and security troubleshooting for production networks.",
+    ],
+  },
+  {
+    role: "Network Administrator",
+    company: "Red lion Engineering",
+    period: "May 2018 — Jul 2021",
+    location: "Yangon, Myanmar · On-site",
+    skills: [],
+    highlights: [
+      "Administered LAN/WAN infrastructure, switching, routing, and daily network operations.",
+      "Maintained network availability, user access, backups, and documentation for engineering teams.",
+      "Coordinated with vendors on hardware upgrades, fault resolution, and change management.",
     ],
   },
 ];

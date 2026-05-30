@@ -1,4 +1,4 @@
-import { Timeline, Typography } from "antd";
+import { Space, Tag, Timeline, Typography } from "antd";
 import { experience } from "@/data/portfolio";
 
 const { Title, Text } = Typography;
@@ -25,6 +25,20 @@ export default function Experience() {
                 <Text style={{ color: "#00b4d8", fontWeight: 500 }}>
                   {job.company}
                 </Text>
+                <div>
+                  <Text type="secondary" style={{ fontSize: 13 }}>
+                    {job.location}
+                  </Text>
+                </div>
+                {job.skills.length > 0 && (
+                  <Space wrap size={[4, 8]} style={{ marginTop: 10 }}>
+                    {job.skills.map((skill) => (
+                      <Tag key={skill} style={{ margin: 0 }}>
+                        {skill}
+                      </Tag>
+                    ))}
+                  </Space>
+                )}
                 <ul style={{ marginTop: 12, paddingLeft: 20, color: "#8b949e" }}>
                   {job.highlights.map((item) => (
                     <li key={item} style={{ marginBottom: 6 }}>
